@@ -7,12 +7,15 @@ include AlfredFeedback
 require 'cfpropertylist'
 require 'pp'
 
-global_dict_dir = '/Library/Dictionaries'
+# global_dict_dir = '/Library/Dictionaries'
+global_dict_dir = '/System/Library/Assets/com_apple_MobileAsset_DictionaryServices_dictionaryOSX'
 local_dict_dir = File.expand_path('~/Library/Dictionaries')
 
 def get_dictionaries(dir)
   result = []
-  Dir::glob(dir + "/*/Contents/Info.plist").each do |file|
+  directories = Dir::glob(dir + "/*/Contents/Info.plist")
+  directories += Dir::glob(dir + "/*.asset/Info.plist")
+  directories.each do |file|
     data = []
     plist = CFPropertyList::List.new(:file => file)
     plist.value.value.each do |h|
