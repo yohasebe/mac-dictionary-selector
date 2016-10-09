@@ -13,9 +13,7 @@ local_dict_dir = File.expand_path('~/Library/Dictionaries')
 
 def get_dictionaries(dir)
   result = []
-  directories = Dir::glob(dir + "/*/Contents/Info.plist")
-  directories += Dir::glob(dir + "/*.asset/Info.plist")
-  directories.each do |file|
+  directories = Dir::glob(dir + "/*/Contents/Info.plist").each do |file|
     data = []
     plist = CFPropertyList::List.new(:file => file)
     plist.value.value.each do |h|
@@ -25,6 +23,24 @@ def get_dictionaries(dir)
         data[1] = h[1].value
       elsif h[0] == "CFBundleName"
         data[2] = h[1].value
+      end
+    end
+    result << data
+  end
+  Dir::glob(dir + "/*.asset/Info.plist").each do |file|
+    data = []
+    plist = CFPropertyList::List.new(:file => file)
+    plist.value.value.each do |dict|
+      if dict[0] == "MobileAssetProperties"
+        dict[1].value.each do |h|
+          if h[0] == "DictionaryIdentifier"
+            data[0] = h[1].value
+          elsif h[0] == "DictionaryPackageDisplayName"
+            data[1] = h[1].value
+          elsif h[0] == "Language"
+            data[2] = h[1].value
+          end
+        end
       end
     end
     result << data
