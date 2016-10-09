@@ -73,7 +73,7 @@
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>OSX Dictionary Selector</string>
+	<string>Mac Dictionary Selector</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -148,7 +148,7 @@
 				<key>script</key>
 				<string>export LANG=ja_JP.UTF-8
 
-ruby osx-dictionary-selector.rb "{query}"
+ruby mac-dictionary-selector.rb "{query}"
 </string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
@@ -180,7 +180,7 @@ ruby osx-dictionary-selector.rb "{query}"
 				<key>subtext</key>
 				<string></string>
 				<key>text</key>
-				<string>Open OSX Dictionary folder</string>
+				<string>Open Mac Dictionary folder</string>
 				<key>withspace</key>
 				<false/>
 			</dict>
