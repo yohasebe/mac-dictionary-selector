@@ -11,6 +11,8 @@ require 'pp'
 global_dict_dir = '/System/Library/Assets/com_apple_MobileAsset_DictionaryServices_dictionaryOSX'
 local_dict_dir = File.expand_path('~/Library/Dictionaries')
 
+query = ARGV.join(" ")
+
 def get_dictionaries(dir)
   result = []
   directories = Dir::glob(dir + "/*/Contents/Info.plist").each do |file|
@@ -51,7 +53,7 @@ end
 # begin
   feedback = Feedback.new
   path = Feedback.get_path
-  query = Feedback.get_query
+  # query = Feedback.get_query
 
   if path == :root
     dictionaries = []

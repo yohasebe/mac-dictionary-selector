@@ -18,7 +18,7 @@
 
 ### Setup
 ---
-On macOS Sierra, the dictionary data for the _dictionary.app_ are in the optimized storage and installed on demand. You need to setup dictionaries on the preference pane of the _dictionary.app_ before using Mac Dictionary Selector.
+On macOS Sierra and High Sierra, the dictionary data for the _dictionary.app_ are in the optimized storage and installed on demand. You need to setup dictionaries on the preference pane of the _dictionary.app_ before using Mac Dictionary Selector.
 
 ### Usage
 ---
