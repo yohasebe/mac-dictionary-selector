@@ -35,8 +35,6 @@ The default keyword to invoke Mac Dictionary Selector is `dicts`.
 
 Type `dicts` + `SPACE` + _word_
 
-![screenshot](https://raw.githubusercontent.com/yohasebe/mac-dictionary-selector/master/img/mac-dictionary-selector.png)
-
 And select a dictionary from the list. Then _dictionary.app_ will look up the word in the dictionary of your choice.
 
 
