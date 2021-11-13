@@ -24,7 +24,8 @@ def get_dictionaries(dir)
       elsif h[0] == "CFBundleDisplayName"
         data[1] = h[1].value
       elsif h[0] == "CFBundleName"
-        data[2] = h[1].value
+        data[1] ||= h[1].value
+        data[2]   = h[1].value
       end
     end
     result << data
