@@ -31,9 +31,9 @@ On macOS Sierra and High Sierra, the dictionary data for the _dictionary.app_ ar
 
 ---
 
-The default keyword to invoke Mac Dictionary Selector is `ds`.
+The default keyword to invoke Mac Dictionary Selector is `dicts`.
 
-Type `ds` + `SPACE` + _word_
+Type `dicts` + `SPACE` + _word_
 
 ![screenshot](https://raw.githubusercontent.com/yohasebe/mac-dictionary-selector/master/img/mac-dictionary-selector.png)
 
